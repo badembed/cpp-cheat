@@ -1,9 +1,0 @@
-language: cpp
-
-install: |
-  cd "$TRAVIS_BUILD_DIR"
-  ./configure -t
-
-script: |
-  cd "$TRAVIS_BUILD_DIR"
-  ./test

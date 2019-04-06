@@ -1,3 +1,0 @@
-env = Environment()
-program = env.Program(target='main.out', source=['main.c'])
-env.Alias('asdf', program)

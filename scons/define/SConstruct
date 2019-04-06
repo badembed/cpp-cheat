@@ -1,3 +1,0 @@
-env = Environment()
-env.Append(CPPDEFINES=['X=1'])
-env.Program(target = 'main.out', source = ['main.c'])

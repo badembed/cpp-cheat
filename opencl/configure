@@ -1,7 +1,0 @@
-sudo apt-get install \
-  libatlas-base-dev \
-  libblas-dev \
-  libclblas-dev \
-  libopenblas-dev \
-  nvidia-opencl-dev \
-;

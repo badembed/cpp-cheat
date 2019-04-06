@@ -1,1 +1,0 @@
-LIBS := -lGLESv2 -lglfw

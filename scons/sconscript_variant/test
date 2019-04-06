@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-set -eu
-scons
-[ "$(./main.out)" = "$(printf 'hello\nhello2')" ]

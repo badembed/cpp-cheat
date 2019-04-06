@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-find . \( -name '*.log' -o -name '*.o' -o -name '*.out' \) -delete

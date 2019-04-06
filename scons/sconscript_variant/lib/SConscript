@@ -1,3 +1,0 @@
-env = Environment()
-objects = [env.Object('lib.c')]
-Return('objects')
