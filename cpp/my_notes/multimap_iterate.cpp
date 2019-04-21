@@ -107,6 +107,12 @@ int main() {
 
     subNode = subEl->second;
 
+    subNode = subEl->second;
+    auto endSubEl = map.upper_bound(type);
+    if (endSubEl !=  map.end()) {
+      std::cout << "endSubEl: " << (endSubEl)->first << std::endl;
+    }
+
     if (subNode.next == nullptr)
       continue;
 
