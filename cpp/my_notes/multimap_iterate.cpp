@@ -85,7 +85,39 @@ int main() {
               << ", succ: " << succNode.value << std::endl;
   }
 
-  /* for each next el in multimap */
+  /* for each next el in multimap with iterator */
+  std::cout << std::endl;
+  for (auto el = map.begin(), end = map.end();
+       el != end;
+       el = map.upper_bound(el->first))
+  {
+    auto subNode = el->second;
+    auto type = el->first;
+
+    auto subEl = el;
+    for (auto endSubEl = --(map.upper_bound(type));
+         subEl != endSubEl;
+         subEl++)
+    {
+      auto succ = std::next(subEl);
+      std::cout << "pred: " << (subEl)->first
+                << ", succ: "<< (succ)->first
+                << std::endl;
+    }
+
+    subNode = subEl->second;
+
+    if (subNode.next == nullptr)
+      continue;
+
+    auto succType = subNode.next->value;
+    auto succNodePair = map.find(succType);
+    auto succNode = succNodePair->second;
+    std::cout << "pred: " << subNode.value
+              << ", succ: " << succNode.value << std::endl;
+  }
+
+  /* for each next el in multimap with index */
   std::cout << std::endl;
   for (auto el = map.begin(), end = map.end();
        el != end;
